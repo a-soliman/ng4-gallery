@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnChanges } from '@angular/core';
+import { ImageService } from '../shared/image.service';
 
 @Component({
   selector: 'app-gallery',
@@ -6,10 +7,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./gallery.component.css']
 })
 export class GalleryComponent implements OnInit {
-	title = 'Recent Photos!' 
-  constructor() { }
 
-  ngOnInit() {
-  }
+	title = 'Recent Photos!';
+	visableImages: any[] = []; 
+
+  	constructor(private imageService: ImageService) {
+  	 
+  	}
+
+  	ngOnInit() {
+  	}
 
 }
