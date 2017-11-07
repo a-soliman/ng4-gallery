@@ -10,6 +10,9 @@ import { ImageDetailComponent } from './image-detail/image-detail.component';
 import { ImageService } from './shared/image.service';
 import { ImageFilrerPipe } from './shared/filter.pipe';
 
+import { RouterModule } from '@angular/router';
+import { appRoutes } from '../routes';
+
 
 
 @NgModule({
@@ -22,7 +25,8 @@ import { ImageFilrerPipe } from './shared/filter.pipe';
   ],
   imports: [
     BrowserModule,
-    AlertModule.forRoot()
+    AlertModule.forRoot(),
+    RouterModule.forRoot(appRoutes)
   ],
   providers: [ ImageService, ImageFilrerPipe ],
   bootstrap: [AppComponent]
