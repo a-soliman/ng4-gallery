@@ -6,6 +6,7 @@ import { ImageService } from '../shared/image.service';
   templateUrl: './gallery.component.html',
   styleUrls: ['./gallery.component.css']
 })
+
 export class GalleryComponent implements OnInit {
 
 	title = 'Recent Photos!';

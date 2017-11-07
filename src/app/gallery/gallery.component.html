@@ -1,3 +1,17 @@
 <p>
   {{ title }}
 </p>
+
+<div class="row">
+	<ul 
+		id="thumbnailList">
+		<li *ngFor="let image of visableImages">
+			<img 
+				class="tn" 
+				src="{{image.url}}"
+				width="200"
+				alt="">
+		</li>
+		
+	</ul>
+</div>
