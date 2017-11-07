@@ -11,11 +11,14 @@ export class GalleryComponent implements OnInit {
 	title = 'Recent Photos!';
 	visableImages: any[] = []; 
 
-  	constructor(private imageService: ImageService) {
-  	 
-  	}
+  constructor(private imageService: ImageService) {
+  	 this.visableImages = this.imageService.getImages();
+  }
 
-  	ngOnInit() {
-  	}
+  ngOnInit() {
+    console.log(this.visableImages);
+  }
+
+  ngOnChanges() {}
 
 }

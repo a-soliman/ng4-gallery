@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ImageService} from '../shared/image.service';
+
 
 @Component({
   selector: 'app-image-detail',
@@ -9,7 +11,7 @@ export class ImageDetailComponent implements OnInit {
 	
 	title = 'Image Detail...';
 
-  	constructor() { }
+  	constructor(private imageService: ImageService) { }
 
   	ngOnInit() {
   	}
