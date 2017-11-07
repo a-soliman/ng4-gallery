@@ -3,8 +3,36 @@
 </p>
 
 <div class="row">
-	<ul 
-		id="thumbnailList">
+
+	<button
+		[class.active]="filterBy=='all'" 
+		(click)="filterBy = 'all'"
+		class="btn btn-lg btn-info">
+			All
+	</button>
+
+	<button 
+		[class.active]="filterBy=='boats'"
+		(click)="filterBy = 'boats'"
+		class="btn btn-lg btn-info">
+			Boats
+	</button>
+
+	<button 
+		[class.active]="filterBy=='babies'"
+		(click)="filterBy = 'babies'"
+		class="btn btn-lg btn-info">
+			Babies
+	</button>
+
+	<button 
+		[class.active]="filterBy=='pets'"
+		(click)="filterBy = 'pets'"
+		class="btn btn-lg btn-info">
+			Pets
+	</button>
+
+	<ul id="thumbnailList">
 		<li *ngFor="let image of visableImages">
 			<img 
 				class="tn" 
@@ -12,6 +40,5 @@
 				width="200"
 				alt="">
 		</li>
-		
 	</ul>
 </div>
