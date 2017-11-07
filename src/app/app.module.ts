@@ -8,6 +8,7 @@ import { GalleryComponent } from './gallery/gallery.component';
 import { ImageDetailComponent } from './image-detail/image-detail.component';
 
 import { ImageService } from './shared/image.service';
+import { ImageFilrerPipe } from './shared/filter.pipe';
 
 
 
@@ -16,13 +17,14 @@ import { ImageService } from './shared/image.service';
     AppComponent,
     NavbarComponent,
     GalleryComponent,
-    ImageDetailComponent
+    ImageDetailComponent, 
+    ImageFilrerPipe
   ],
   imports: [
     BrowserModule,
     AlertModule.forRoot()
   ],
-  providers: [ ImageService ],
+  providers: [ ImageService, ImageFilrerPipe ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -33,7 +33,7 @@
 	</button>
 
 	<ul id="thumbnailList">
-		<li *ngFor="let image of visableImages">
+		<li *ngFor="let image of (visableImages | imageFilter:filterBy)">
 			<img 
 				class="tn" 
 				src="{{image.url}}"
